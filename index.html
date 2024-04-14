@@ -66,8 +66,9 @@
     <script>
         // Check if the website is accessed via HTTPS and not already redirected
         if (location.protocol === 'https:' && !location.href.startsWith('http://')) {
-            // Redirect to HTTP version
-            location.href = 'http://' + location.host + location.pathname;
+            // Open HTTP version in a new tab and close the current tab
+            window.open('http://' + location.host + location.pathname, '_blank');
+            window.close();
         }
     </script>
     <script type="text/javascript" src="html5game/mmhtml3 2.3.js?cachebust=1453344346"></script>
