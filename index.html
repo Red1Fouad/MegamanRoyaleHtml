@@ -52,10 +52,9 @@
     <script>
         // Check if the website is accessed via HTTPS
         var currentURL = window.location.href;
-        if (currentURL === 'https://megamanroyale.zapto.org/' || currentURL === 'https://megamanroyale.zapto.org') {
-            // Open HTTP version in a new tab and close the current tab
-            window.open('http://megamanroyale.zapto.org', '_blank');
-            window.close();
+        if (currentURL.startsWith('https://megamanroyale.zapto.org')) {
+            // Replace current URL with HTTP version
+            window.location.replace('http://megamanroyale.zapto.org');
         }
     </script>
     <script type="text/javascript" src="html5game/mmhtml3 2.3.js?cachebust=1453344346"></script>
