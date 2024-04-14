@@ -18,7 +18,7 @@ class SocketIO {
         this.ip = ip;
         this.port = port;
 
-        this.socket = io.connect(`http://network.rushhosting.net:10026`);
+        this.socket = io.connect(`https://megamanroyaleserver-production-59d4.up.railway.app`);
 
         this.socket.on('connect' , () => {
             gml_Script_gmcallback_sio_on_connect();
