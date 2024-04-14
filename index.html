@@ -42,6 +42,8 @@
             font-size: 20px;
         }
     </style>
+    <!-- Add the HTTP Strict Transport Security (HSTS) header -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=0">
 </head>
 <body>
     <div id="gm4html5_div_id">
@@ -49,14 +51,6 @@
             <p>Your browser doesn't support HTML5 canvas.</p>
         </canvas>
     </div>
-    <script>
-        // Check if the website is accessed via HTTPS
-        var currentURL = window.location.href;
-        if (currentURL.startsWith('https://megamanroyale.zapto.org')) {
-            // Replace current URL with HTTP version
-            window.location.replace('http://megamanroyale.zapto.org');
-        }
-    </script>
     <script type="text/javascript" src="html5game/mmhtml3 2.3.js?cachebust=1453344346"></script>
     <script>window.onload = GameMaker_Init;</script>
 </body>
