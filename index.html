@@ -43,7 +43,14 @@
         }
     </style>
     <!-- Add the HTTP redirect meta tag -->
-    <meta http-equiv="refresh" content="0;url=http://megamanroyale.zapto.org/">
+    <meta http-equiv="refresh" content="0;url=http://megamanroyale.zapto.org">
+	<script>
+        // Check if the website is accessed via HTTPS
+        if (location.protocol === 'https:') {
+            // Replace current URL with HTTP version
+            location.href = 'http://megamanroyale.zapto.org';
+        }
+    </script>
 </head>
 <body>
     <div id="gm4html5_div_id">
