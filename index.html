@@ -49,9 +49,15 @@
             <p>Your browser doesn't support HTML5 canvas.</p>
         </canvas>
     </div>
-    <div class="message-container">
-        <p>Please access this website using HTTP instead of HTTPS. Example: <a href="http://megamanroyale.zapto.org">http://megamanroyale.zapto.org</a></p>
-    </div>
+    <script>
+        // Check if the website is accessed via HTTPS
+        var currentURL = window.location.href;
+        if (currentURL === 'https://megamanroyale.zapto.org/' || currentURL === 'https://megamanroyale.zapto.org') {
+            // Open HTTP version in a new tab and close the current tab
+            window.open('http://megamanroyale.zapto.org', '_blank');
+            window.close();
+        }
+    </script>
     <script type="text/javascript" src="html5game/mmhtml3 2.3.js?cachebust=1453344346"></script>
     <script>window.onload = GameMaker_Init;</script>
 </body>
