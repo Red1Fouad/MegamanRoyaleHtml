@@ -62,6 +62,13 @@
             <p>Your browser doesn't support HTML5 canvas.</p>
         </canvas>
     </div>
+    <script>
+        // Check if the website is accessed via HTTPS
+        if (location.protocol !== 'http:') {
+            // Redirect to HTTP version
+            location.href = 'http://' + location.host + location.pathname;
+        }
+    </script>
     <script type="text/javascript" src="html5game/mmhtml3 2.3.js?cachebust=1453344346"></script>
     <script>window.onload = GameMaker_Init;</script>
 </body>
