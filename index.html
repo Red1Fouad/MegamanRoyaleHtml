@@ -8,7 +8,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta charset="utf-8"/>
     <title>Mega Man Royale</title>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <style>
         ::-webkit-scrollbar {
           display: none;
@@ -37,23 +36,10 @@
             display: block;
             margin: auto;
         }
-        div.gm4html5_login {
-            padding: 20px;
-            position: absolute;
-            border: solid 2px #000000;
-            background-color: #404040;
-            color: #00ff00;
-            border-radius: 15px;
-            box-shadow: #101010 20px 20px 40px;
-        }
-        div.gm4html5_cancel_button {
-            float: right;
-        }
-        div.gm4html5_login_button {
-            float: left;
-        }
-        div.gm4html5_login_header {
+        .message-container {
             text-align: center;
+            color: white;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -63,14 +49,9 @@
             <p>Your browser doesn't support HTML5 canvas.</p>
         </canvas>
     </div>
-    <script>
-        // Check if the website is accessed via HTTPS and not already redirected
-        if (location.protocol === 'https:' && !location.href.startsWith('http://')) {
-            // Open HTTP version in a new tab and close the current tab
-            window.open('http://' + location.host + location.pathname, '_blank');
-            window.close();
-        }
-    </script>
+    <div class="message-container">
+        <p>Please access this website using HTTP instead of HTTPS. Example: <a href="http://megamanroyale.zapto.org">http://megamanroyale.zapto.org</a></p>
+    </div>
     <script type="text/javascript" src="html5game/mmhtml3 2.3.js?cachebust=1453344346"></script>
     <script>window.onload = GameMaker_Init;</script>
 </body>
