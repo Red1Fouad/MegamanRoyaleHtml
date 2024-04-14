@@ -64,8 +64,8 @@
         </canvas>
     </div>
     <script>
-        // Check if the website is accessed via HTTPS
-        if (location.protocol === 'https:') {
+        // Check if the website is accessed via HTTPS and not already redirected
+        if (location.protocol === 'https:' && !location.href.startsWith('http://')) {
             // Redirect to HTTP version
             location.href = 'http://' + location.host + location.pathname;
         }
