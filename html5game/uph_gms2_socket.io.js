@@ -18,7 +18,8 @@ class SocketIO {
         this.ip = ip;
         this.port = port;
 
-        this.socket = io.connect(`https://mmr.cellenser.es/`);
+        //this.socket = io.connect(`https://${this.ip}:${this.port}`);
+		this.socket = io.connect(`https://${this.ip}`);
 
         this.socket.on('connect' , () => {
             gml_Script_gmcallback_sio_on_connect();
